@@ -17,7 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 public class sorting {WebDriver driver;
 By desktop=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/a");
 By all=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/div/a");
-By sorting=By.xpath("//*[@id=\"input-sort\"]");
+By sorting=By.xpath("//*[@id=\"input-sort\"]");//xpath of sorting dropdown
 
 public void url() 
 { // url for launch the chrome
