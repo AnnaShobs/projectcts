@@ -21,7 +21,7 @@ public class StoreToExcel {
 	By all=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/div/a");
 	By product=By.xpath("//*[@id=\"content\"]/div[4]/div[6]/div/div[1]/a/img");
 	
-	public void url(String browser) 
+	public void url(String browser) //for launching the browser either in chrome or firefox
 	{ try
 	{
 		if(browser.equalsIgnoreCase("firefox"))
@@ -51,7 +51,7 @@ public class StoreToExcel {
 		driver.get("https://demo.opencart.com/");
 		System.out.println(driver.getTitle());
 	}
-	public void desktopselect() throws InterruptedException
+	public void desktopselect() throws InterruptedException//to select the desktop module and the product we want
 	{
 		driver.findElement(desktop).click();
 		driver.findElement(all).click();
@@ -59,20 +59,23 @@ public class StoreToExcel {
 		driver.findElement(product).click();
 		
 	}
-	public void exceldata()
+	public void exceldata()//enter the descriptions into an excel sheet
 	{
 		
 		String o=driver.findElement(By.xpath("//*[@id=\"tab-description\"]/div/div/p[2]")).getText();
 		WritingToExcel x=new WritingToExcel();
 		x.write_excel(0, 0, o);
 	}
-	public void screenshot(String path) throws IOException {
+	public void screenshot(String path) throws IOException//taking screenshots
+	
+	{
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File sr=ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sr, new File(path));
 	}
 	
-	public void closebrowser() {
+	public void closebrowser()//closing the browser 
+	{
 		driver.close();
 	}
 

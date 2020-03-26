@@ -22,7 +22,7 @@ public class Shownumber {
 	By all=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/div/a");
 	By numbers=By.xpath("//*[@id=\"input-limit\"]");
 	
-	public void url(String browser) 
+	public void url(String browser)//for launching the browser either in chrome or firefox 
 	{ try
 	{
 		if(browser.equalsIgnoreCase("firefox"))
@@ -52,12 +52,12 @@ public class Shownumber {
 		driver.get("https://demo.opencart.com/");
 		System.out.println(driver.getTitle());
 	}
-	public void desktopselect()
+	public void desktopselect()//to select the desktop module
 	{
 		driver.findElement(desktop).click();
 		driver.findElement(all).click();
 	}
-	public void shownumbers()
+	public void shownumbers()//to select the number of elements that need to be displayed
 	{
 		WebElement a=driver.findElement(numbers);
 		a.click();
@@ -66,13 +66,15 @@ public class Shownumber {
 		act.sendKeys(Keys.ENTER).build().perform();
 	}
 	
-	public void screenshot(String path) throws IOException {
+	public void screenshot(String path) throws IOException //for taking screenshots
+	{
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File sr=ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sr, new File(path));
 	}
 	
-	public void closebrowser() {
+	public void closebrowser()//closing the opened window
+	{
 		driver.close();
 	}
 

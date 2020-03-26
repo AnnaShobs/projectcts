@@ -19,7 +19,7 @@ public class Selectingitem {
 	By all=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/div/a");
 	By product=By.xpath("//*[@id=\"content\"]/div[4]/div[1]/div/div[1]/a/img");
 	
-	public void url(String browser) 
+	public void url(String browser) //for launching the browser either in chrome or firefox
 	{ try
 	{
 		if(browser.equalsIgnoreCase("firefox"))
@@ -49,12 +49,12 @@ public class Selectingitem {
 		driver.get("https://demo.opencart.com/");
 		System.out.println(driver.getTitle());
 	}
-	public void desktopselect()
+	public void desktopselect()//to select the desktop module
 	{
 		driver.findElement(desktop).click();
 		driver.findElement(all).click();
 	}
-	public void item()
+	public void item()//to click on the product we want
 	{
 		driver.findElement(product).click();
 	}
@@ -63,9 +63,10 @@ public class Selectingitem {
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File sr=ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sr, new File(path));
-	}
+	}//for taking screenshots
 	
-	public void closebrowser() {
+	public void closebrowser() //for closing this window
+	{
 		driver.close();
 	}
 }

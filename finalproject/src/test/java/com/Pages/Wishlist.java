@@ -19,7 +19,7 @@ public class Wishlist {
 	By all=By.xpath("//*[@id=\"menu\"]/div[2]/ul/li[1]/div/a");
 	By product=By.xpath("//*[@id=\"content\"]/div[4]/div[6]/div/div[1]/a/img");
 	By wishcomponent=By.xpath("//*[@id=\"content\"]/div/div[2]/div[1]/button[1]/i");
-	public void url(String browser) 
+	public void url(String browser) //for launching the browser either in chrome or firefox
 	{ try
 	{
 		if(browser.equalsIgnoreCase("firefox"))
@@ -49,24 +49,26 @@ public class Wishlist {
 		driver.get("https://demo.opencart.com/");
 		System.out.println(driver.getTitle());
 	}
-	public void desktopselect()
+	public void desktopselect()//to select the desktop module
 	{
 		driver.findElement(desktop).click();
 		driver.findElement(all).click();
 	}
-	public void wish()
+	public void wish()//to select the product that we want to add into wishlist
 	{
 		driver.findElement(product).click();
 		driver.findElement(wishcomponent).click();
 	}
 	
-	public void screenshot(String path) throws IOException {
+	public void screenshot(String path) throws IOException//takes screenshots 
+	{
 		TakesScreenshot ts= (TakesScreenshot)driver;
 		File sr=ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sr, new File(path));
 	}
 	
-	public void closebrowser() {
+	public void closebrowser() //closing the browser
+	{
 		driver.close();
 	}
 
