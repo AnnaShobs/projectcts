@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="114" started-at="2020-03-07T15:16:51Z" finished-at="2020-03-07T15:16:51Z">
+  <suite name="Default suite" duration-ms="71" started-at="2020-03-26T05:26:58Z" finished-at="2020-03-26T05:26:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="114" started-at="2020-03-07T15:16:51Z" finished-at="2020-03-07T15:16:51Z">
+    <test name="Default test" duration-ms="71" started-at="2020-03-26T05:26:58Z" finished-at="2020-03-26T05:26:58Z">
       <class name="hellotest1.helloo">
-        <test-method status="PASS" signature="hai()[pri:0, instance:hellotest1.helloo@6d8a00e3]" name="hai" duration-ms="35" started-at="2020-03-07T15:16:51Z" finished-at="2020-03-07T15:16:51Z">
+        <test-method status="PASS" signature="hai()[pri:0, instance:hellotest1.helloo@2669b199]" name="hai" duration-ms="17" started-at="2020-03-26T10:56:58Z" finished-at="2020-03-26T10:56:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hai -->
